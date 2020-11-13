@@ -1,77 +1,51 @@
-#   a116_ladybug.py
+#   a116_buggy_image.py
+#this program draws a spider
 import turtle as trtl
-
-# create ladybug head
-ladybug = trtl.Turtle()
-
-
-num_legs = 6
-leg_lenght = 70
-distance_legs = 240/ num_legs 
-ladybug.pensize(5)
-
+# these first 3 lines draw the body of the spider
+spider_body = trtl.Turtle()
+spider_body.pensize(40)
+spider_body.circle(20)
+#these lines draw the head of the spider
+spider_body.goto(0,-25)
+spider_body.pensize(15)
+spider_body.circle(10)
+ 
+# these lines just give spider leg information, pensize, and other characteristics
+num_legs = 8 # the number of legs of your spider
+leg_lenght = 70 # the length of your legs, bassically how long they are
+distance_legs = 240 / num_legs # the degree of each leg, this separates the legs each time the loop is done
+spider_body.pensize(5)
+n = 0
 
 n = 0
-# this draws the # of legs of ladybug
+# this draws the # of legs you defined previously
 while (n < num_legs/2):
-  ladybug.goto(0,-30)
-  ladybug.setheading(distance_legs*n -45)
-  ladybug.forward(leg_lenght)
+  spider_body.goto(0,20)
+  spider_body.setheading(distance_legs*n -45)
+  spider_body.forward(leg_lenght)
   n = n + 1
-
 n=0
 while (n < num_legs/2):
-  ladybug.goto(0,-30)
-  ladybug.setheading(distance_legs*n -45 +180)
-  ladybug.forward(leg_lenght)
+  spider_body.goto(0,20)
+  spider_body.setheading(distance_legs*n -45 +180)
+  spider_body.forward(leg_lenght)
   n = n + 1
-ladybug.setheading(0)
-ladybug.penup()
-ladybug.goto(0,0)
-ladybug.pendown()
-ladybug.pensize(40)
-ladybug.circle(5)
-
-
-
-# and body
-ladybug.penup()
-ladybug.goto(0,-55) 
-ladybug.color("red")
-ladybug.pendown()
-ladybug.pensize(40)
-ladybug.circle(20)
-ladybug.setheading(270)
-ladybug.color("black")
-ladybug.penup()
-ladybug.goto(0, 5)
-ladybug.pensize(2)
-ladybug.pendown()
-ladybug.forward(75)
-
-# config dots
-num_dots = 1
-xpos = -20
-ypos = -55
-ladybug.pensize(10)
-
-# draw two sets of dots
-while (num_dots <= 2 ):
-  ladybug.penup()
-  ladybug.goto(xpos, ypos)
-  ladybug.pendown()
-  ladybug.circle(3)
-  ladybug.penup()
-  ladybug.goto(xpos + 30, ypos + 20)
-  ladybug.pendown()
-  ladybug.circle(2)
-
-  # position next dots
-  ypos = ypos + 25
-  xpos = xpos + 5
-  num_dots = num_dots + 1
-
-
-ladybug.hideturtle()
+# eyes of this creepy spider :)
+spider_body.pencolor("white")
+spider_body.penup()
+spider_body.goto(5,-15)
+spider_body.pendown()
+spider_body.fillcolor("white")
+spider_body.begin_fill()
+spider_body.circle(5)
+spider_body.end_fill()
+spider_body.penup()
+spider_body.goto(-15,-15)
+spider_body.pendown()
+spider_body.fillcolor("white")
+spider_body.begin_fill()
+spider_body.circle(5)
+spider_body.end_fill()
+# dont mess with this, as it shows you the result of your program
+spider_body.hideturtle()
 wn = trtl.Screen()
-wn.mainloop()
