@@ -6,7 +6,7 @@ ladybug = trtl.Turtle()
 
 
 num_legs = 6
-leg_lenght = 70
+leg_lenght = 55
 distance_legs = 240/ num_legs 
 ladybug.pensize(5)
 
