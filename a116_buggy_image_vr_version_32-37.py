@@ -1,11 +1,42 @@
+#   a116_ladybug.py
+import turtle as trtl
+
 # create ladybug head
 ladybug = trtl.Turtle()
+
+
+num_legs = 6
+leg_lenght = 70
+distance_legs = 240/ num_legs 
+ladybug.pensize(5)
+
+
+n = 0
+# this draws the # of legs of ladybug
+while (n < num_legs/2):
+  ladybug.goto(0,-30)
+  ladybug.setheading(distance_legs*n -45)
+  ladybug.forward(leg_lenght)
+  n = n + 1
+
+n=0
+while (n < num_legs/2):
+  ladybug.goto(0,-30)
+  ladybug.setheading(distance_legs*n -45 +180)
+  ladybug.forward(leg_lenght)
+  n = n + 1
+ladybug.setheading(0)
+ladybug.penup()
+ladybug.goto(0,0)
+ladybug.pendown()
 ladybug.pensize(40)
 ladybug.circle(5)
 
+
+
 # and body
 ladybug.penup()
-ladybug.goto(0, -55) 
+ladybug.goto(0,-55) 
 ladybug.color("red")
 ladybug.pendown()
 ladybug.pensize(40)
@@ -36,11 +67,11 @@ while (num_dots <= 2 ):
   ladybug.circle(2)
 
   # position next dots
-  xpos = ypos + 25
+  ypos = ypos + 25
   xpos = xpos + 5
-  num_dot = num_dots + 1
+  num_dots = num_dots + 1
+
 
 ladybug.hideturtle()
-
 wn = trtl.Screen()
 wn.mainloop()
