@@ -71,7 +71,7 @@ while (num_dots <= 2 ):
   xpos = xpos + 5
   num_dots = num_dots + 1
 
-
+#don't mess with this
 ladybug.hideturtle()
 wn = trtl.Screen()
 wn.mainloop()
