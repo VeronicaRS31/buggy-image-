@@ -24,4 +24,5 @@ while (n < num_legs):
 # dont mess with this, as it shows you the result of your program
 spider_body.hideturtle()
 wn = trtl.Screen()
+wn.mainloop()
 
