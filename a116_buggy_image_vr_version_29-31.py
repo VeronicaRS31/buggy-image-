@@ -17,8 +17,8 @@ num_legs = 8 # the number of legs of your spider
 leg_lenght = 70 # the length of your legs, bassically how long they are
 distance_legs = 240 / num_legs # the degree of each leg, this separates the legs each time the loop is done
 spider_body.pensize(5)
-n = 0
 
+n = 0
 # this draws the # of legs you defined previously
 while (n < num_legs/2):
   spider_body.goto(0,20)
